@@ -1,0 +1,8 @@
+<app-carousel />
+<div *ngFor="let titulo of titulos">
+  <h3>{{titulo}}</h3>
+</div>
+<div class="container">
+  <app-card *ngFor="let card of cards" [imgCard]="card.url" [TextoCard]="card.texto" />
+  <app-card2 />
+</div>

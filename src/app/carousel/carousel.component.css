@@ -1,0 +1,13 @@
+.carousel{
+    display:flex;
+    justify-content: center;
+    /* max-width: 1200px;
+    min-width: 300px; */
+    /* margin: -16px auto; */
+    margin-top: 1px;
+}
+img{
+    height: 350px;
+    display:block;
+    width: 100%;
+}  
