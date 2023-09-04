@@ -9,12 +9,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { NgbnavbarComponent } from './components/ngbnavbar/ngbnavbar.component';
+import { SobreComponent } from './Pages/sobre/sobre.component';
+import { HomeComponent } from './Pages/home/home.component';
+import { ContatoComponent } from './Pages/contato/contato.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     TituloComponent,
     NavBarComponent,
-    BotaoComponent
+    BotaoComponent,
+    SobreComponent,
+    HomeComponent,
+    ContatoComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +33,8 @@ import { NgbnavbarComponent } from './components/ngbnavbar/ngbnavbar.component';
     NgbPaginationModule,
     NgbAlertModule,
     CarouselComponent,
-    NgbnavbarComponent
+    NgbnavbarComponent,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
