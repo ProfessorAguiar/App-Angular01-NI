@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { CardNoticiasComponent } from './card-noticias.component';
+
+describe('CardNoticiasComponent', () => {
+  let component: CardNoticiasComponent;
+  let fixture: ComponentFixture<CardNoticiasComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [CardNoticiasComponent]
+    });
+    fixture = TestBed.createComponent(CardNoticiasComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

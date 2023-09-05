@@ -15,7 +15,9 @@ import { HomepageComponent } from './Pages/homepage/homepage.component';
 import { Card2Component } from './Components/card2/card2.component';
 import { SobreComponent } from './Pages/sobre/sobre.component';
 import { ContatoComponent } from './Pages/contato/contato.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ArtigosComponent } from './Pages/artigos/artigos.component';
+import { CardNoticiasComponent } from './components/card-noticias/card-noticias.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,8 @@ import { ContatoComponent } from './Pages/contato/contato.component';
     Card2Component,
     SobreComponent,
     ContatoComponent,
+    ArtigosComponent,
+    CardNoticiasComponent,
   ],
   imports: [
     NavBarComponent,
@@ -34,7 +38,8 @@ import { ContatoComponent } from './Pages/contato/contato.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    CarouselComponent
+    CarouselComponent,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
