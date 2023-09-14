@@ -1,0 +1,14 @@
+.bl{
+    width: 240px;
+    height: 240px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../../assets/velha.png);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}

@@ -5,6 +5,7 @@ import { NoticiasService } from './noticias.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
+
 export class HomepageComponent {
   // cards=[
   //   {

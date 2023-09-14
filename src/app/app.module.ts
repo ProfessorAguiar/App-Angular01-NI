@@ -18,6 +18,8 @@ import { ContatoComponent } from './Pages/contato/contato.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArtigosComponent } from './Pages/artigos/artigos.component';
 import { CardNoticiasComponent } from './components/card-noticias/card-noticias.component';
+import { BlocosComponent } from './components/game/blocos/blocos.component';
+import { JogoComponent } from './components/game/jogo/jogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { CardNoticiasComponent } from './components/card-noticias/card-noticias.
     ContatoComponent,
     ArtigosComponent,
     CardNoticiasComponent,
+    BlocosComponent,
+    JogoComponent,
   ],
   imports: [
     NavBarComponent,
