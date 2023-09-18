@@ -8,7 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SobreComponent {
   public Sobre: any = [];
-  constructor(private SobreServ: SobreService, private http:HttpClient) { }
+  public mensagem:string='';
+  public m:boolean=false;
+  public err:boolean=false;
+  constructor(private SobreServ: SobreService, private http: HttpClient) { }
   ngOnInit(): void {
     this.SobreServ.getSobre().subscribe(
       data => {
@@ -17,10 +20,23 @@ export class SobreComponent {
       }
     );
   }
-  postId='';
-  AlteraSobre(t:string, c:string) {
-    this.http.put<any>(`http://localhost:5500/sobre/${this.Sobre[0].id}`, {titulo: t,conteudo:c }).subscribe(data => {
-      this.postId = data.id;
-    })
+  postId = '';
+  AlteraSobre(t: string, c: string , e:Event) {
+    if (t != '' || c != '') {
+      this.m=false;
+      this.http.put<any>(`http://localhost:5500/sobre/${this.Sobre[0].id}`, { titulo: t, conteudo: c }, {responseType: 'json'}).subscribe(data => {
+        this.postId = data.id;
+        console.log(data.resp)
+        this.err=true
+        this.mensagem=data.resp
+      })
+    }else{
+      e.preventDefault()
+      this.m=true;
+      this.mensagem='Preencha ao menos um dos campos que serão alterados!';
+    }
   }
+
 }
+
+

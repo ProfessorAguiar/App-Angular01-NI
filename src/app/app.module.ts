@@ -20,6 +20,8 @@ import { ArtigosComponent } from './Pages/artigos/artigos.component';
 import { CardNoticiasComponent } from './components/card-noticias/card-noticias.component';
 import { BlocosComponent } from './components/game/blocos/blocos.component';
 import { JogoComponent } from './components/game/jogo/jogo.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { NgbdModalFocus } from './components/modal-focus/modal-focus.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,7 @@ import { JogoComponent } from './components/game/jogo/jogo.component';
     CardNoticiasComponent,
     BlocosComponent,
     JogoComponent,
+    ModalComponent,
   ],
   imports: [
     NavBarComponent,
@@ -43,7 +46,8 @@ import { JogoComponent } from './components/game/jogo/jogo.component';
     NgbModule,
     FormsModule,
     CarouselComponent,
-    HttpClientModule
+    HttpClientModule,
+    NgbdModalFocus
   ],
   providers: [],
   bootstrap: [AppComponent]

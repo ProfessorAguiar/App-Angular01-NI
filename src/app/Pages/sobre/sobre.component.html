@@ -11,10 +11,11 @@
     </div>
 </div>
 <div class="container">
-    <article>
+    <button type="button" class="btn btn-danger" onclick="fAltera()">Alterar</button>
+    <article class="formAltera">
         <section>
             <h2>Alterar Conteúdo da Página Sobre</h2>
-            <form (submit)="AlteraSobre(tituloInput.value, conteudoInput.value)">
+            <form (submit)="AlteraSobre(tituloInput.value, conteudoInput.value, $event)">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Titulo</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1"
@@ -27,6 +28,12 @@
                 </div>
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Alterar</button>
+                    <div class="alert alert-danger" role="alert" *ngIf="m">
+                        {{mensagem}}
+                    </div>
+                    <div class="alert alert-success" role="alert" *ngIf="err">
+                        {{mensagem}}
+                    </div>
                 </div>
             </form>
         </section>
