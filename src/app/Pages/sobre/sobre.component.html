@@ -11,8 +11,25 @@
     </div>
 </div>
 <div class="container">
-    <button type="button" class="btn btn-danger" onclick="fAltera()">Alterar</button>
-    <article class="formAltera">
+    <button type="button" class="btn btn-danger" (click)="fAltera()">Alterar</button>
+    <form *ngIf="login" (submit)="functionLogin(UserInput.value, PassInput.value, $event)">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" #UserInput>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" #PassInput>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Logar</button>
+    </form>
+
+    <article class="formAltera" *ngIf="formulario">
         <section>
             <h2>Alterar Conteúdo da Página Sobre</h2>
             <form (submit)="AlteraSobre(tituloInput.value, conteudoInput.value, $event)">
